@@ -4,7 +4,7 @@
     border-radius: 10px;
     background-color: $off-white;
     color: $font-color;
-    border: 2px solid $font-color;
+    border: 1px solid $font-color;
       @if $color == "inverse" {
         &:hover {
           color: $off-white;
@@ -46,10 +46,10 @@
     background-color: $color;
     @if lightness($color) < 50%{
     color: $off-white;
-    border: 2px solid $off-white;
+    border: 1px solid $off-white;
   } @else {
     color: $charcoal;
-    border: 2px solid $off-black;
+    border: 1px solid $off-black;
   }
 
       @if $font-color == "inverse" {
@@ -104,7 +104,7 @@
     border-radius: 10px;
     background-color: $color;
     color: $font-color;
-    border: 2px solid $font-color;
+    border: 1px solid $font-color;
     @if $style == "inverse" {
       &:hover {
         color: $color;
@@ -177,6 +177,8 @@
   border-spacing: 0;
   & tbody td {
     border-top:1px solid darken($color2, 10%);
+    text-align: left;
+
   }
   & tr {
     background-color: $color1;
@@ -254,7 +256,6 @@
        display: block;
        bottom: -1em;
        border: 1.5em solid $background;
-       z-index: -1;
       }
       &:before {
        left: -2em;
@@ -265,6 +266,8 @@
        right: -2em;
        border-left-width: 1.5em;
        border-right-color: transparent;
+      //  z-index: -1;
+
       }
       & > *:before, & > *:after {
        content: "";
@@ -298,7 +301,6 @@
      display: block;
      bottom: -1em;
      border: 1.5em solid $background;
-     z-index: -1;
     }
     &:before {
      left: -2em;
@@ -309,6 +311,8 @@
      right: -2em;
      border-left-width: 1.5em;
      border-right-color: transparent;
+     z-index: -1;
+
     }
     & > *:before, & > *:after {
      content: "";
@@ -327,4 +331,10 @@
      border-width: 1em 1em 0 0;
     }
   }
+}
+
+// ATTRIBUTE STYLING
+
+@mixin smooth{
+  border-radius:6px;
 }

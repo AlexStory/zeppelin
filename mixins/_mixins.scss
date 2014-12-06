@@ -44,33 +44,33 @@
 
 
 @mixin span($columns) {
-  box-content: border-box;
+  box-sizing: border-box;
   margin-right: $gutter;
   margin-left: $gutter;
   @if $columns == 1 {
-    width: (100%/12) - ($gutter*2);
+    width: (100%/12) - (($gutter + .25) *2);
   } @else if $columns == 2 {
-    width: (100%/6) - ($gutter*2);
+    width: (100%/6) - (($gutter + .25) *2);
   } @else if $columns == 3 {
-    width: 25% - ($gutter*2);
+    width: 25% - (($gutter + .25) *2);
   } @else if $columns == 4 {
-    width: (100%/3) - ($gutter*2);
+    width: (100%/3) - (($gutter + .25) *2);
   } @else if $columns == 5 {
-    width: (100%/2.4) - ($gutter*2);
+    width: (100%/2.4) - (($gutter + .25) *2);
   } @else if $columns == 6 {
-    width: 50% - ($gutter*2);
+    width: 50% - (($gutter + .25) *2);
   } @else if $columns == 7 {
-    width: (100%/1.71428571) - ($gutter*2);
+    width: (100%/1.71428571) - (($gutter + .25) *2);
   } @else if $columns == 8 {
-    width: 66.6666666% - ($gutter*2);
+    width: 66.6666666% - (($gutter + .25) *2);
   } @else if $columns == 9 {
-    width: 75% - ($gutter*2);
+    width: 75% - (($gutter + .25) *2);
   } @else if $columns == 10 {
-    width: (100%/1.2) - ($gutter*2);
+    width: (100%/1.2) - (($gutter + .25) *2);
   } @else if $columns == 11 {
-    width: (100%/1.09090909) - ($gutter*2);
+    width: (100%/1.09090909) - (($gutter + .25) *2);
   } @else if $columns == 12 {
-    width: 100% - ($gutter*2);
+    width: 100% - (($gutter + .25) *2);
     @include clearfix;
   }
 }
@@ -102,6 +102,28 @@
     margin-left: (100%/1.2) + $gutter;
   } @else if $columns == 11 {
     margin-left: (100%/1.09090909) + $gutter;
+  } @else if $columns == -1 {
+    margin-right: (100%/12) + $gutter;
+  } @else if $columns == -2 {
+    margin-right: (100%/6)+ $gutter;
+  } @else if $columns == -3 {
+    margin-right: 25% + $gutter;
+  } @else if $columns == -4 {
+    margin-right: (100%/3) + $gutter;
+  } @else if $columns == -5 {
+    margin-right: (100%/2.4) + $gutter;
+  } @else if $columns == -6 {
+    margin-right: 50% + $gutter;
+  } @else if $columns == -7 {
+    margin-right: (100%/1.71428571) + $gutter;
+  } @else if $columns == -8 {
+    margin-right: 66.6666666% + $gutter;
+  } @else if $columns == -9 {
+    margin-right: 75% + $gutter;
+  } @else if $columns == -10 {
+    margin-right: (100%/1.2) + $gutter;
+  } @else if $columns == -11 {
+    margin-right: (100%/1.09090909) + $gutter;
   }
 }
 

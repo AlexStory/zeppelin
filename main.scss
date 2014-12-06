@@ -1,0 +1,95 @@
+@import "zeppelin.scss";
+
+body{
+  font-size:1.5em;
+  background-color:$blue-black;
+  font-family: helvetica;
+  color: $off-white;
+}
+div{
+  float: left;
+}
+
+.wrap {
+  background-color: $light-grey;
+  text-align: center;
+  @include container();
+  padding: 20px;
+  @include smooth;
+  @include vert-margin(20px);
+}
+.test{
+  @include span(12);
+  @include vert-margin(20px);
+  height: 100px;
+  background: $purple;
+  @include smooth
+}
+.two {
+  @include span(6);
+  @include vert-margin(20px);
+  @include smooth;
+  height: 100px;
+  background: $carrot;
+}
+
+.three {
+  @include span(4);
+  @include vert-margin(20px);
+  @include smooth;
+  height: 100px;
+  background: $blue-grey;
+}
+
+.four {
+  @include span(3);
+  @include vert-margin(20px);
+  @include smooth;
+  height: 100px;
+  background: $light-blue;
+}
+
+.six {
+  @include span(2);
+  @include vert-margin(20px);
+  @include smooth;
+  height: 100px;
+  background: $yellow;
+}
+
+.half {
+  @include span(6);
+  @include vert-margin(20px);
+  @include slide(6);
+  @include smooth;
+  background: $turquoise;
+  height: 100px;
+}
+
+.bt {
+  @include span(2);
+  @include slide(-4);
+  @include vert-margin(15px);
+  font-size: .8em;
+  @include button($blue, $off-white, inverse);
+}
+
+.stuff{
+  @include span(2);
+  @include slide(-4);
+  @include input;
+}
+
+.mesa {
+  @include row;
+  @include hover-table;
+  color: $charcoal;
+}
+.ribboner{
+  @include clearfix;
+  @include row;
+}
+.rib {
+  @include row;
+  @include ribbon($red, 22px);
+}

@@ -1,0 +1,208 @@
+body {
+  font-size: 1.5em;
+  background-color: #2c3e50;
+  font-family: helvetica;
+  color: #fdfdfd; }
+
+div {
+  float: left; }
+
+.wrap {
+  background-color: #95a5a6;
+  text-align: center;
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  border-radius: 6px;
+  margin-top: 20px;
+  margin-bottom: 20px; }
+
+.test {
+  box-sizing: border-box;
+  margin-right: 0.5%;
+  margin-left: 0.5%;
+  width: 98.5%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  height: 100px;
+  background: #8e44ad;
+  border-radius: 6px; }
+  .test:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+.two {
+  box-sizing: border-box;
+  margin-right: 0.5%;
+  margin-left: 0.5%;
+  width: 48.5%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  height: 100px;
+  background: #e67e22; }
+
+.three {
+  box-sizing: border-box;
+  margin-right: 0.5%;
+  margin-left: 0.5%;
+  width: 31.83333%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  height: 100px;
+  background: #34495e; }
+
+.four {
+  box-sizing: border-box;
+  margin-right: 0.5%;
+  margin-left: 0.5%;
+  width: 23.5%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  height: 100px;
+  background: #3498db; }
+
+.six {
+  box-sizing: border-box;
+  margin-right: 0.5%;
+  margin-left: 0.5%;
+  width: 15.16667%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  height: 100px;
+  background: #f1c40f; }
+
+.half {
+  box-sizing: border-box;
+  margin-right: 0.5%;
+  margin-left: 0.5%;
+  width: 48.5%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 50.5%;
+  border-radius: 6px;
+  background: #1abc9c;
+  height: 100px; }
+
+.bt {
+  box-sizing: border-box;
+  margin-right: 0.5%;
+  margin-left: 0.5%;
+  width: 15.16667%;
+  margin-right: 33.83333%;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-size: .8em;
+  padding: .5em 1em;
+  border-radius: 10px;
+  background-color: #2980b9;
+  color: #fdfdfd;
+  border: 1px solid #fdfdfd; }
+  .bt:hover {
+    color: #2980b9;
+    border-color: #2980b9;
+    background-color: #fdfdfd; }
+
+.stuff {
+  box-sizing: border-box;
+  margin-right: 0.5%;
+  margin-left: 0.5%;
+  width: 15.16667%;
+  margin-right: 33.83333%;
+  box-shadow: inset 0px 0px 2px #555;
+  height: 1.75em;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding-left: .5em; }
+  .stuff:focus {
+    box-shadow: 0px 0px 10px #3498db;
+    outline: none; }
+
+.mesa {
+  box-sizing: border-box;
+  margin-right: 0.5%;
+  margin-left: 0.5%;
+  width: 98.5%;
+  border-spacing: 0;
+  color: #555; }
+  .mesa:after {
+    content: "";
+    display: table;
+    clear: both; }
+  .mesa tbody td {
+    border-top: 1px solid #d4d4d4;
+    text-align: left; }
+  .mesa tr {
+    background-color: #fdfdfd; }
+    .mesa tr:hover {
+      background-color: #eee; }
+  .mesa thead th {
+    text-align: left;
+    border-bottom: 2px #d4d4d4 solid;
+    background-color: #fdfdfd; }
+
+.ribboner {
+  box-sizing: border-box;
+  margin-right: 0.5%;
+  margin-left: 0.5%;
+  width: 98.5%; }
+  .ribboner:after {
+    content: "";
+    display: table;
+    clear: both; }
+  .ribboner:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+.rib {
+  box-sizing: border-box;
+  margin-right: 0.5%;
+  margin-left: 0.5%;
+  width: 98.5%;
+  font-size: 22px !important;
+  width: 50%;
+  position: relative;
+  background: #e74c3c;
+  color: #222;
+  text-align: center;
+  padding: 1em 2em;
+  margin: 2em auto 3em; }
+  .rib:after {
+    content: "";
+    display: table;
+    clear: both; }
+  .rib:before, .rib:after {
+    content: "";
+    position: absolute;
+    display: block;
+    bottom: -1em;
+    border: 1.5em solid #e74c3c; }
+  .rib:before {
+    left: -2em;
+    border-right-width: 1.5em;
+    border-left-color: transparent; }
+  .rib:after {
+    right: -2em;
+    border-left-width: 1.5em;
+    border-right-color: transparent; }
+  .rib > *:before, .rib > *:after {
+    content: "";
+    position: absolute;
+    display: block;
+    border-style: solid;
+    border-color: #a82315 transparent transparent transparent;
+    bottom: -1em; }
+  .rib > *:before {
+    left: 0;
+    border-width: 1em 0 0 1em; }
+  .rib > *:after {
+    right: 0;
+    border-width: 1em 1em 0 0; }
+
+/*# sourceMappingURL=main.css.map */
