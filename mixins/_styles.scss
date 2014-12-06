@@ -1,0 +1,192 @@
+@mixin button($color: $off-white, $font-color: $charcoal, $style: null){
+  @if type-of($color) == string {
+    padding: .5em 1em;
+    border-radius: 10px;
+    background-color: $off-white;
+    color: $font-color;
+    border: 2px solid $font-color;
+      @if $color == "inverse" {
+        &:hover {
+          color: $off-white;
+          border-color: $off-white;
+          background-color: $font-color;
+        }
+      } @else if $color == "float"{
+        border: 0;
+        border-radius: 0;
+        color: $font-color;
+        text-decoration: none;
+        text-shadow: -1px -1px 1px #616161;
+        position: relative;
+        padding: 15px 30px;
+        box-shadow: 5px 5px 0 #666;
+        transition: all 0.3s ease;
+        margin: 0 10px 0 0;
+          &:hover {
+            box-shadow: 0px 0px 0 #666;
+            top: 5px;
+            left: 5px;
+          }
+      } @else if $color == "pill" {
+        @include side-pad(2em);
+        border-radius: 20px;
+      } @else if $color == "pill-inverse" {
+        @include side-pad(2em);
+        border-radius: 20px;
+          &:hover {
+            color: $off-white;
+            border-color: $off-white;
+            background-color: $font-color;
+          }
+      }
+  } @else if type-of($font-color) == string {
+    padding: .25em 1em;
+    text-align: center;
+    border-radius: 10px;
+    background-color: $color;
+    @if lightness($color) < 50%{
+    color: $off-white;
+    border: 2px solid $off-white;
+  } @else {
+    color: $charcoal;
+    border: 2px solid $charcoal;
+  }
+
+      @if $font-color == "inverse" {
+        &:hover {
+          color: $color;
+          border-color: $color;
+          @if lightness($color) < 50%{
+            background-color: $off-white;
+          } @else {
+            background-color: $charcoal;
+          }
+        }
+      } @else if $font-color == "float"{
+        border: 0;
+        border-radius: 0;
+        @if lightness($color) < 50%{
+          color: $off-white;
+        } @else {
+          color: $charcoal;
+        }
+        text-decoration: none;
+        text-shadow: -1px -1px 1px #616161;
+        position: relative;
+        padding: 15px 30px;
+        box-shadow: 5px 5px 0 #666;
+        transition: all 0.3s ease;
+        margin: 0 10px 0 0;
+          &:hover {
+            box-shadow: 0px 0px 0 #666;
+            top: 5px;
+            left: 5px;
+          }
+      } @else if $font-color == "pill" {
+        @include side-pad(2em);
+        border-radius: 20px;
+      } @else if $font-color == "pill-inverse" {
+        @include side-pad(2em);
+        border-radius: 20px;
+          &:hover {
+            color: $off-white;
+            border-color: $off-white;
+            @if lightness($color) < 50%{
+              background-color: $off-white;
+            } @else {
+              background-color: $charcoal;
+            }
+          }
+      }
+  }
+   @else {
+    padding: .5em 1em;
+    border-radius: 10px;
+    background-color: $color;
+    color: $font-color;
+    border: 2px solid $font-color;
+    @if $style == "inverse" {
+      &:hover {
+        color: $color;
+        border-color: $color;
+        background-color: $font-color;
+      }
+    } @else if $style == "float"{
+      border: 0;
+      border-radius: 0;
+      color: $font-color;
+      text-decoration: none;
+      text-shadow: -1px -1px 1px #616161;
+      position: relative;
+      padding: 15px 30px;
+      box-shadow: 5px 5px 0 #666;
+      transition: all 0.3s ease;
+      margin: 0 10px 0 0;
+        &:hover {
+          box-shadow: 0px 0px 0 #666;
+          top: 5px;
+          left: 5px;
+        }
+    } @else if $style == "pill" {
+      @include side-pad(2em);
+      border-radius: 20px;
+    } @else if $style == "pill-inverse" {
+      @include side-pad(2em);
+      border-radius: 20px;
+        &:hover {
+          color: $color;
+          border-color: $color;
+          background-color: $font-color;
+        }
+    }
+  }
+}
+
+@mixin input(){
+  box-shadow: inset 0px 0px 2px #555;
+  height: 1.75em;
+  border: 1px solid $smoke;
+  border-radius: 6px;
+  padding-left: .5em;
+    @include placeholder(color, $charcoal);
+    &:focus{
+      box-shadow: 0px 0px 10px $light-blue;
+      outline: none;
+    }
+}
+
+@mixin striped-table($color1: $off-white, $color2: $e3){
+  border-spacing: 0;
+  & tbody td {
+    border-top:1px solid darken($color2, 10%);
+  }
+  & tbody tr:nth-child(odd){
+    background-color: $color2;
+  }
+  & tbody tr:nth-child(even){
+    background-color: $color1;
+  }
+  & thead th {
+    text-align: left;
+    border-bottom: 2px darken($color2, 10%) solid;
+    background-color: $color1;
+  }
+}
+
+@mixin hover-table($color1: $off-white, $color2: $e3){
+  border-spacing: 0;
+  & tbody td {
+    border-top:1px solid darken($color2, 10%);
+  }
+  & tr {
+    background-color: $color1;
+      &:hover{
+        background-color: $color2;
+      }
+  }
+  & thead th {
+    text-align: left;
+    border-bottom: 2px darken($color2, 10%) solid;
+    background-color: $color1;
+  }
+}
