@@ -18,6 +18,9 @@ div {
   margin-top: 20px;
   margin-bottom: 20px; }
 
+.header {
+  font-size: 2em; }
+
 .test {
   box-sizing: border-box;
   margin-right: 0.5%;

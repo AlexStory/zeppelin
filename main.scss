@@ -18,6 +18,10 @@ div{
   @include smooth;
   @include vert-margin(20px);
 }
+
+.header{
+  font-size:2em;
+}
 .test{
   @include span(12);
   @include vert-margin(20px);
