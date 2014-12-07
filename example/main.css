@@ -13,13 +13,17 @@ div {
   max-width: 960px;
   margin-left: auto;
   margin-right: auto;
+  text-align: center;
   padding: 20px;
   border-radius: 6px;
   margin-top: 20px;
   margin-bottom: 20px; }
 
 .header {
-  font-size: 2em; }
+  font-size: 2em;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center; }
 
 .test {
   box-sizing: border-box;
@@ -125,6 +129,138 @@ div {
   .stuff:focus {
     box-shadow: 0px 0px 10px #3498db;
     outline: none; }
+
+.uno {
+  padding: .25em 1em;
+  text-align: center;
+  border-radius: 10px;
+  background-color: #e74c3c;
+  color: #555;
+  border: 1px solid #222;
+  border: 0;
+  border-radius: 0;
+  color: #222;
+  text-decoration: none;
+  text-shadow: -1px -1px 1px #616161;
+  position: relative;
+  padding: 15px 30px;
+  box-shadow: 5px 5px 0 #666;
+  transition: all 0.3s ease;
+  margin: 0 10px 10px 0; }
+  .uno:hover {
+    box-shadow: 0px 0px 0 #666;
+    top: 5px;
+    left: 5px; }
+
+.dos {
+  padding: .25em 1em;
+  text-align: center;
+  border-radius: 10px;
+  background-color: #f39c12;
+  color: #555;
+  border: 1px solid #222;
+  border: 0;
+  border-radius: 0;
+  color: #222;
+  text-decoration: none;
+  text-shadow: -1px -1px 1px #616161;
+  position: relative;
+  padding: 15px 30px;
+  box-shadow: 5px 5px 0 #666;
+  transition: all 0.3s ease;
+  margin: 0 10px 10px 0; }
+  .dos:hover {
+    box-shadow: 0px 0px 0 #666;
+    top: 5px;
+    left: 5px; }
+
+.tres {
+  padding: .25em 1em;
+  text-align: center;
+  border-radius: 10px;
+  background-color: #f1c40f;
+  color: #555;
+  border: 1px solid #222;
+  border: 0;
+  border-radius: 0;
+  color: #222;
+  text-decoration: none;
+  text-shadow: -1px -1px 1px #616161;
+  position: relative;
+  padding: 15px 30px;
+  box-shadow: 5px 5px 0 #666;
+  transition: all 0.3s ease;
+  margin: 0 10px 10px 0; }
+  .tres:hover {
+    box-shadow: 0px 0px 0 #666;
+    top: 5px;
+    left: 5px; }
+
+.cuatro {
+  padding: .25em 1em;
+  text-align: center;
+  border-radius: 10px;
+  background-color: #27ae60;
+  color: #fdfdfd;
+  border: 1px solid #fdfdfd;
+  border: 0;
+  border-radius: 0;
+  color: #fdfdfd;
+  text-decoration: none;
+  text-shadow: -1px -1px 1px #616161;
+  position: relative;
+  padding: 15px 30px;
+  box-shadow: 5px 5px 0 #666;
+  transition: all 0.3s ease;
+  margin: 0 10px 10px 0; }
+  .cuatro:hover {
+    box-shadow: 0px 0px 0 #666;
+    top: 5px;
+    left: 5px; }
+
+.cinco {
+  padding: .25em 1em;
+  text-align: center;
+  border-radius: 10px;
+  background-color: #2980b9;
+  color: #fdfdfd;
+  border: 1px solid #fdfdfd;
+  border: 0;
+  border-radius: 0;
+  color: #fdfdfd;
+  text-decoration: none;
+  text-shadow: -1px -1px 1px #616161;
+  position: relative;
+  padding: 15px 30px;
+  box-shadow: 5px 5px 0 #666;
+  transition: all 0.3s ease;
+  margin: 0 10px 10px 0; }
+  .cinco:hover {
+    box-shadow: 0px 0px 0 #666;
+    top: 5px;
+    left: 5px; }
+
+.seis {
+  padding: .25em 1em;
+  text-align: center;
+  border-radius: 10px;
+  background-color: #8e44ad;
+  color: #fdfdfd;
+  border: 1px solid #fdfdfd;
+  border: 0;
+  border-radius: 0;
+  color: #fdfdfd;
+  text-decoration: none;
+  text-shadow: -1px -1px 1px #616161;
+  position: relative;
+  padding: 15px 30px;
+  box-shadow: 5px 5px 0 #666;
+  transition: all 0.3s ease;
+  margin: 0 10px 10px 0; }
+  .seis:hover {
+    box-shadow: 0px 0px 0 #666;
+    top: 5px;
+    left: 5px; }
 
 .mesa {
   box-sizing: border-box;

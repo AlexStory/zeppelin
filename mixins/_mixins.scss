@@ -35,6 +35,7 @@
 //LAYOUT
 @mixin center {
   @include side-margin(auto);
+  text-align: center;
 }
 
 @mixin container($size: 960px) {

@@ -21,6 +21,7 @@ div{
 
 .header{
   font-size:2em;
+  @include center;
 }
 .test{
   @include span(12);
@@ -82,6 +83,30 @@ div{
   @include span(2);
   @include slide(-4);
   @include input;
+}
+
+.uno{
+  @include button($red, float);
+}
+
+.dos {
+  @include button($orange, float);
+}
+
+.tres {
+  @include button($yellow, float);
+}
+
+.cuatro {
+  @include button($green, float);
+}
+
+.cinco {
+  @include button($blue, float);
+}
+
+.seis {
+  @include button($purple, float);
 }
 
 .mesa {
