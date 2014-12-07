@@ -240,6 +240,28 @@ div {
     top: 5px;
     left: 5px; }
 
+.cinco-dos {
+  padding: .25em 1em;
+  text-align: center;
+  border-radius: 10px;
+  background-color: #9b59b6;
+  color: #555;
+  border: 1px solid #222;
+  border: 0;
+  border-radius: 0;
+  color: #222;
+  text-decoration: none;
+  text-shadow: -1px -1px 1px #616161;
+  position: relative;
+  padding: 15px 30px;
+  box-shadow: 5px 5px 0 #666;
+  transition: all 0.3s ease;
+  margin: 0 10px 10px 0; }
+  .cinco-dos:hover {
+    box-shadow: 0px 0px 0 #666;
+    top: 5px;
+    left: 5px; }
+
 .seis {
   padding: .25em 1em;
   text-align: center;

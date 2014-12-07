@@ -105,6 +105,10 @@ div{
   @include button($blue, float);
 }
 
+.cinco-dos {
+  @include button($light-purple, float);
+}
+
 .seis {
   @include button($purple, float);
 }
