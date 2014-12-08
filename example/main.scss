@@ -1,10 +1,24 @@
 @import "zeppelin.scss";
+@include reset;
 
 body{
-  font-size:1.5em;
+
   background-color:$blue-black;
-  font-family: helvetica;
   color: $off-white;
+}
+
+.topper {
+  @include fixed-nav(shade);
+  background: $charcoal;
+  p{
+    @include vert-margin(6px);
+    @include smooth;
+    display: inline-block;
+    @include size(25px);
+    text-align: center;
+    border: 2px solid $off-white;
+    font-weight: 900;
+  }
 }
 div{
   float: left;
@@ -72,11 +86,9 @@ div{
 }
 
 .bt {
-  @include span(2);
-  @include slide(-4);
-  @include vert-margin(15px);
-  font-size: .8em;
+  font-size: 1em;
   @include button($blue, $off-white, inverse);
+  @include slide(-4);
 }
 
 .stuff{
