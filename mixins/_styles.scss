@@ -157,7 +157,7 @@
     }
 }
 
-@mixin fixed-nav($style: null){
+@mixin fixed-nav($color: $off-white, $font-color: $off-black, $style: null){
   @include side-pad(15px);
   width: 100%;
   position: fixed;
@@ -165,16 +165,39 @@
   font-size: 1.25em;
   font-weight: 700;
 
-  @if $style == 'shade' {
-    box-shadow: 0px 2px 10px $off-black;
-  }
+  @if type-of($color) == string {
+    @if $color == 'shade' {
+      background-color: $off-white;
+      color: $off-black;
+      box-shadow: 0px 2px 10px $off-black;
+    }
+  } @else if type-of($font-color) == string {
 
+    @if $font-color == 'shade' {
+      background-color: $color;
+
+      @if lightness($color) < 50%{
+        color: $off-white;
+      } @else {
+        color: $off-black;
+      }
+      box-shadow: 0px 2px 10px $off-black;
+    }
+  } @else {
+    background-color: $color;
+    color: $font-color;
+
+    @if $style == 'shade' {
+      box-shadow: 0px 2px 10px $off-black;
+    }
+  }
 }
 
 @mixin striped-table($color1: $off-white, $color2: $e3){
   border-spacing: 0;
   & tbody td {
-    border-top:1px solid darken($color2, 10%);
+    border-top: 1px solid darken($color2, 10%);
+    text-align: left;
   }
   & tbody tr:nth-child(odd){
     background-color: $color2;
@@ -365,5 +388,23 @@
     font-family: helvetica, sans-serif;
     background-color: $off-white;
     color: #off-black;
+  }
+  h1{
+    font-size: 3em;
+  }
+  h2{
+    font-size: 2em;
+  }
+  h3{
+    font-size: 1.75em;
+  }
+  h4{
+    font-size: 1.5em;
+  }
+  h5{
+    font-size: 1.25em;
+  }
+  h6{
+    font-size: 1.125em;
   }
 }

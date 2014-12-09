@@ -8,8 +8,7 @@ body{
 }
 
 .topper {
-  @include fixed-nav(shade);
-  background: $charcoal;
+  @include fixed-nav($charcoal, shade);
   p{
     @include vert-margin(6px);
     @include smooth;
@@ -127,7 +126,7 @@ div{
 
 .mesa {
   @include row;
-  @include hover-table;
+  @include striped-table;
   color: $charcoal;
 }
 .ribboner{
