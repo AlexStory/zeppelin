@@ -1,8 +1,8 @@
 @import "zeppelin.scss";
+
 @include reset;
 
 body{
-
   background-color:$blue-black;
   color: $off-white;
 }
@@ -12,8 +12,8 @@ body{
   p{
     @include vert-margin(6px);
     @include smooth;
-    display: inline-block;
     @include size(25px);
+    display: inline-block;
     text-align: center;
     border: 2px solid $off-white;
     font-weight: 900;
@@ -86,8 +86,10 @@ div{
 
 .bt {
   font-size: 1em;
-  @include button($blue, $off-white, inverse);
+  @include button(pill);
+  @include span(2);
   @include slide(-4);
+  margin-bottom: 15px;
 }
 
 .stuff{

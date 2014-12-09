@@ -32,6 +32,9 @@
       } @else if $color == "pill" {
         @include side-pad(2em);
         border-radius: 20px;
+         &:hover {
+           background-color: darken($off-white, 10%);
+         }
       } @else if $color == "pill-inverse" {
         @include side-pad(2em);
         border-radius: 20px;
@@ -87,6 +90,9 @@
       } @else if $font-color == "pill" {
         @include side-pad(2em);
         border-radius: 20px;
+         &:hover {
+           background-color: darken($off-white, 10%);
+         }
       } @else if $font-color == "pill-inverse" {
         @include side-pad(2em);
         border-radius: 20px;
@@ -140,6 +146,10 @@
           border-color: $color;
           background-color: $font-color;
         }
+    } @else{
+      &:hover {
+        background-color: darken($color, 10%);
+      }
     }
   }
 }
@@ -387,7 +397,7 @@
     font-size:16px;
     font-family: helvetica, sans-serif;
     background-color: $off-white;
-    color: #off-black;
+    color: $off-black;
   }
   h1{
     font-size: 3em;
