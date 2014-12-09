@@ -1,151 +1,158 @@
 //COMPONENTS
 
-@mixin button($color: $off-white, $font-color: $charcoal, $style: null){
+@mixin button($color: $off-white, $font-color: $charcoal, $style: null) {
   @if type-of($color) == string {
-    padding: .5em 1em;
-    border-radius: 10px;
     background-color: $off-white;
-    color: $font-color;
     border: 1px solid $font-color;
-      @if $color == "inverse" {
-        &:hover {
-          color: $off-white;
-          border-color: $off-white;
-          background-color: $font-color;
-        }
-      } @else if $color == "float"{
-        border: 0;
-        border-radius: 0;
-        color: $font-color;
-        text-decoration: none;
-        text-shadow: -1px -1px 1px #616161;
-        position: relative;
-        padding: 15px 30px;
-        box-shadow: 5px 5px 0 #666;
-        transition: all 0.3s ease;
-        margin: 0 10px 10px 0;
-          &:hover {
-            box-shadow: 0px 0px 0 #666;
-            top: 5px;
-            left: 5px;
-          }
-      } @else if $color == "pill" {
-        @include side-pad(2em);
-        border-radius: 20px;
-         &:hover {
-           background-color: darken($off-white, 10%);
-         }
-      } @else if $color == "pill-inverse" {
-        @include side-pad(2em);
-        border-radius: 20px;
-          &:hover {
-            color: $off-white;
-            border-color: $off-white;
-            background-color: $font-color;
-          }
-      }
-  } @else if type-of($font-color) == string {
-    padding: .25em 1em;
-    text-align: center;
     border-radius: 10px;
-    background-color: $color;
-    @if lightness($color) < 50%{
-    color: $off-white;
-    border: 1px solid $off-white;
-  } @else {
-    color: $charcoal;
-    border: 1px solid $off-black;
-  }
-
-      @if $font-color == "inverse" {
-        &:hover {
-          color: $color;
-          border-color: $color;
-          @if lightness($color) < 50%{
-            background-color: $off-white;
-          } @else {
-            background-color: $off-black;
-          }
-        }
-      } @else if $font-color == "float"{
-        border: 0;
-        border-radius: 0;
-        @if lightness($color) < 50%{
-          color: $off-white;
-        } @else {
-          color: $off-black;
-        }
-        text-decoration: none;
-        text-shadow: -1px -1px 1px #616161;
-        position: relative;
-        padding: 15px 30px;
-        box-shadow: 5px 5px 0 #666;
-        transition: all 0.3s ease;
-        margin: 0 10px 10px 0;
-          &:hover {
-            box-shadow: 0px 0px 0 #666;
-            top: 5px;
-            left: 5px;
-          }
-      } @else if $font-color == "pill" {
-        @include side-pad(2em);
-        border-radius: 20px;
-         &:hover {
-           background-color: darken($off-white, 10%);
-         }
-      } @else if $font-color == "pill-inverse" {
-        @include side-pad(2em);
-        border-radius: 20px;
-          &:hover {
-            color: $off-white;
-            border-color: $off-white;
-            @if lightness($color) < 50%{
-              background-color: $off-white;
-            } @else {
-              background-color: $off-black;
-            }
-          }
-      }
-  }
-   @else {
+    color: $font-color;
     padding: .5em 1em;
-    border-radius: 10px;
-    background-color: $color;
-    color: $font-color;
-    border: 1px solid $font-color;
-    @if $style == "inverse" {
+    @if $color == 'inverse' {
       &:hover {
-        color: $color;
-        border-color: $color;
         background-color: $font-color;
+        border-color: $off-white;
+        color: $off-white;
       }
-    } @else if $style == "float"{
+    } @else if $color == 'float'{
       border: 0;
       border-radius: 0;
+      box-shadow: 5px 5px 0 #666;
       color: $font-color;
+      margin: 0 10px 10px 0;
+      padding: 15px 30px;
+      position: relative;
       text-decoration: none;
       text-shadow: -1px -1px 1px #616161;
-      position: relative;
-      padding: 15px 30px;
+      transition: all .3s ease;
+
+      &:hover {
+        box-shadow: 0 0 0 #666;
+        left: 5px;
+        top: 5px;
+      }
+    } @else if $color == 'pill' {
+      @include side-pad(2em);
+      border-radius: 20px;
+
+      &:hover {
+        background-color: darken($off-white, 10%);
+      }
+    } @else if $color == 'pill-inverse' {
+      @include side-pad(2em);
+      border-radius: 20px;
+
+      &:hover {
+        background-color: $font-color;
+        border-color: $off-white;
+        color: $off-white;
+      }
+    }
+  } @else if type-of($font-color) == string {
+    background-color: $color;
+    border-radius: 10px;
+    padding: .25em 1em;
+    text-align: center;
+    @if lightness($color) < 50%{
+      border: 1px solid $off-white;
+      color: $off-white;
+    } @else {
+      border: 1px solid $off-black;
+      color: $charcoal;
+    }
+
+    @if $font-color == 'inverse' {
+      &:hover {
+        border-color: $color;
+        color: $color;
+        @if lightness($color) < 50%{
+          background-color: $off-white;
+        } @else {
+          background-color: $off-black;
+        }
+      }
+    } @else if $font-color == 'float'{
+      border: 0;
+      border-radius: 0;
+      @if lightness($color) < 50%{
+        color: $off-white;
+      } @else {
+        color: $off-black;
+      }
       box-shadow: 5px 5px 0 #666;
-      transition: all 0.3s ease;
+      margin: 0 10px 10px 0;
+      padding: 15px 30px;
+      position: relative;
+      text-decoration: none;
+      text-shadow: -1px -1px 1px #616161;
+      transition: all .3s ease;
+
+      &:hover {
+        box-shadow: 0 0 0 #666;
+        left: 5px;
+        top: 5px;
+      }
+    } @else if $font-color == 'pill' {
+      @include side-pad(2em);
+      border-radius: 20px;
+
+      &:hover {
+        background-color: darken($off-white, 10%);
+       }
+    } @else if $font-color == 'pill-inverse' {
+      @include side-pad(2em);
+      border-radius: 20px;
+
+      &:hover {
+        border-color: $off-white;
+        color: $off-white;
+        @if lightness($color) < 50%{
+          background-color: $off-white;
+        } @else {
+          background-color: $off-black;
+        }
+      }
+    }
+  } @else {
+    background-color: $color;
+    border: 1px solid $font-color;
+    border-radius: 10px;
+    color: $font-color;
+    padding: .5em 1em;
+    @if $style == 'inverse' {
+      &:hover {
+        background-color: $font-color;
+        border-color: $color;
+        color: $color;
+      }
+    } @else if $style == 'float'{
+      border: 0;
+      border-radius: 0;
+      box-shadow: 5px 5px 0 #666;
+      color: $font-color;
       margin: 0 10px 0 0;
-        &:hover {
-          box-shadow: 0px 0px 0 #666;
-          top: 5px;
-          left: 5px;
-        }
-    } @else if $style == "pill" {
+      padding: 15px 30px;
+      position: relative;
+      text-decoration: none;
+      text-shadow: -1px -1px 1px #616161;
+      transition: all .3s ease;
+
+      &:hover {
+        box-shadow: 0 0 0 #666;
+        left: 5px;
+        top: 5px;
+      }
+    } @else if $style == 'pill' {
       @include side-pad(2em);
       border-radius: 20px;
-    } @else if $style == "pill-inverse" {
+    } @else if $style == 'pill-inverse' {
       @include side-pad(2em);
       border-radius: 20px;
-        &:hover {
-          color: $color;
-          border-color: $color;
-          background-color: $font-color;
-        }
+
+      &:hover {
+        background-color: $font-color;
+        border-color: $color;
+        color: $color;
+      }
     } @else{
       &:hover {
         background-color: darken($color, 10%);
@@ -154,20 +161,20 @@
   }
 }
 
-@mixin input(){
-  box-shadow: inset 0px 0px 2px #555;
+@mixin input() {
+  box-shadow: inset 0 0 2px #555;
   height: 2.5em;
   border: 1px solid $smoke;
   border-radius: 6px;
   padding-left: .5em;
-    @include placeholder(color, $charcoal);
-    &:focus{
-      box-shadow: 0px 0px 10px $light-blue;
-      outline: none;
+  @include placeholder(color, $charcoal);
+  &:focus {
+    box-shadow: 0 0 10px $light-blue;
+    outline: none;
     }
 }
 
-@mixin fixed-nav($color: $off-white, $font-color: $off-black, $style: null){
+@mixin fixed-nav($color: $off-white, $font-color: $off-black, $style: null) {
   @include side-pad(15px);
   width: 100%;
   position: fixed;
@@ -178,8 +185,8 @@
   @if type-of($color) == string {
     @if $color == 'shade' {
       background-color: $off-white;
+      box-shadow: 0 2px 10px $off-black;
       color: $off-black;
-      box-shadow: 0px 2px 10px $off-black;
     }
   } @else if type-of($font-color) == string {
 
@@ -191,195 +198,223 @@
       } @else {
         color: $off-black;
       }
-      box-shadow: 0px 2px 10px $off-black;
+      box-shadow: 0 2px 10px $off-black;
     }
   } @else {
     background-color: $color;
     color: $font-color;
 
     @if $style == 'shade' {
-      box-shadow: 0px 2px 10px $off-black;
+      box-shadow: 0 2px 10px $off-black;
     }
   }
 }
 
-@mixin striped-table($color1: $off-white, $color2: $e3){
+@mixin striped-table($color1: $off-white, $color2: $e3) {
   border-spacing: 0;
-  & tbody td {
+
+  tbody td {
     border-top: 1px solid darken($color2, 10%);
     text-align: left;
   }
-  & tbody tr:nth-child(odd){
+
+  tbody tr:nth-child(odd) {
     background-color: $color2;
   }
-  & tbody tr:nth-child(even){
+
+  tbody tr:nth-child(even) {
     background-color: $color1;
   }
-  & thead th {
-    text-align: left;
-    border-bottom: 2px darken($color2, 10%) solid;
+
+  thead th {
     background-color: $color1;
+    border-bottom: 2px darken($color2, 10%) solid;
+    text-align: left;
   }
 }
 
-@mixin hover-table($color1: $off-white, $color2: $e3){
+@mixin hover-table($color1: $off-white, $color2: $e3) {
   border-spacing: 0;
-  & tbody td {
-    border-top:1px solid darken($color2, 10%);
-    text-align: left;
 
-  }
-  & tr {
-    background-color: $color1;
-      &:hover{
-        background-color: $color2;
-      }
-  }
-  & thead th {
+  tbody td {
+    border-top: 1px solid darken($color2, 10%);
     text-align: left;
-    border-bottom: 2px darken($color2, 10%) solid;
+  }
+
+  tr {
     background-color: $color1;
+
+    &:hover {
+      background-color: $color2;
+    }
+  }
+
+  thead th {
+    background-color: $color1;
+    border-bottom: 2px darken($color2, 10%) solid;
+    text-align: left;
   }
 }
 
-@mixin ribbon ($background: $light-blue, $font-color: $off-white, $font-size: 18px ) {
+@mixin ribbon ($background: $light-blue, $font-color: $off-white, $font-size: 18px) {
   @if type-of($background) != color {
-    font-size: $background !important;
-    width: 50%;
-    position: relative;
     background: $light-blue;
     color: $font-color;
-    text-align: center;
-    padding: 1em 2em;
+    font-size: $background !important;
     margin: 2em auto 3em;
-     &:before, &:after {
-      content: "";
-      position: absolute;
-      display: block;
-      bottom: -1em;
+    padding: 1em 2em;
+    position: relative;
+    text-align: center;
+    width: 50%;
+
+    &:before,
+    &:after {
       border: 1.5em solid $light-blue;
+      bottom: -1em;
+      content: '';
+      display: block;
+      position: absolute;
       z-index: -1;
      }
-     &:before {
-      left: -2em;
-      border-right-width: 1.5em;
+
+    &:before {
       border-left-color: transparent;
-     }
-     &:after {
-      right: -2em;
+      border-right-width: 1.5em;
+      left: -2em;
+    }
+
+    &:after {
       border-left-width: 1.5em;
       border-right-color: transparent;
+      right: -2em;
       z-index: -1;
      }
-     & > *:before, & > *:after {
-      content: "";
-      position: absolute;
-      display: block;
-      border-style: solid;
-      border-color: darken($light-blue, 20%) transparent transparent transparent;
-      bottom: -1em;
-     }
-     & > *:before {
-      left: 0;
-      border-width: 1em 0 0 1em;
-     }
-     & > *:after {
-      right: 0;
-      border-width: 1em 1em 0 0;
-     }
-   } @else if type-of($font-color) != color {
-     font-size: $font-color !important;
-     width: 50%;
-     position: relative;
-     background: $background;
-     @if lightness($background) < 50%{
-       color: $off-white;
-     } @else {
-       color: $off-black;
-     }
-     text-align: center;
-     padding: 1em 2em;
-     margin: 2em auto 3em;
-      &:before, &:after {
-       content: "";
-       position: absolute;
-       display: block;
-       bottom: -1em;
-       border: 1.5em solid $background;
-      }
-      &:before {
-       left: -2em;
-       border-right-width: 1.5em;
-       border-left-color: transparent;
-      }
-      &:after {
-       right: -2em;
-       border-left-width: 1.5em;
-       border-right-color: transparent;
-       z-index: -1;
 
-      }
-      & > *:before, & > *:after {
-       content: "";
-       position: absolute;
-       display: block;
-       border-style: solid;
-       border-color: darken($background, 20%) transparent transparent transparent;
-       bottom: -1em;
-      }
-      & > *:before {
-       left: 0;
-       border-width: 1em 0 0 1em;
-      }
-      & > *:after {
-       right: 0;
-       border-width: 1em 1em 0 0;
-       z-index: +1;
-      }
-    } @else {
-
-   font-size: $font-size !important;
-   width: 50%;
-   position: relative;
-   background: $background;
-   color: $font-color;
-   text-align: center;
-   padding: 1em 2em;
-   margin: 2em auto 3em;
-    &:before, &:after {
-     content: "";
-     position: absolute;
-     display: block;
-     bottom: -1em;
-     border: 1.5em solid $background;
-    }
-    &:before {
-     left: -2em;
-     border-right-width: 1.5em;
-     border-left-color: transparent;
-    }
-    &:after {
-     right: -2em;
-     border-left-width: 1.5em;
-     border-right-color: transparent;
-     z-index: -1;
-
-    }
-    & > *:before, & > *:after {
-     content: "";
-     position: absolute;
-     display: block;
-     border-style: solid;
-     border-color: darken($background, 20%) transparent transparent transparent;
-     bottom: -1em;
-    }
-    & > *:before {
-     left: 0;
-     border-width: 1em 0 0 1em;
-    }
+    *:before,
     & > *:after {
-     right: 0;
-     border-width: 1em 1em 0 0;
+      border-color: darken($light-blue, 20%) transparent transparent;
+      border-style: solid;
+      bottom: -1em;
+      content: '';
+      display: block;
+      position: absolute;
+    }
+
+    *:before {
+      border-width: 1em 0 0 1em;
+      left: 0;
+    }
+
+    *:after {
+      border-width: 1em 1em 0 0;
+      right: 0;
+    }
+  } @else if type-of($font-color) != color {
+    background: $background;
+    font-size: $font-color !important;
+    margin: 2em auto 3em;
+    padding: 1em 2em;
+    position: relative;
+    text-align: center;
+    width: 50%;
+    @if lightness($background) < 50%{
+      color: $off-white;
+    } @else {
+      color: $off-black;
+    }
+
+    &:before,
+    &:after {
+      border: 1.5em solid $background;
+      border-left-color: transparent;
+      bottom: -1em;
+      content: '';
+      display: block;
+      position: absolute;
+    }
+
+    &:before {
+      border-right-width: 1.5em;
+      left: -2em;
+      }
+
+    &:after {
+      border-left-width: 1.5em;
+      border-right-color: transparent;
+      right: -2em;
+      z-index: -1;
+    }
+
+    *:before,
+    *:after {
+      border-color: darken($background, 20%) transparent transparent;
+      border-style: solid;
+      bottom: -1em;
+      content: '';
+      display: block;
+      position: absolute;
+    }
+
+    *:before {
+      border-width: 1em 0 0 1em;
+      left: 0;
+      }
+
+    *:after {
+      border-width: 1em 1em 0 0;
+      right: 0;
+      z-index: +1;
+      }
+  } @else {
+    background: $background;
+    color: $font-color;
+    font-size: $font-size !important;
+    margin: 2em auto 3em;
+    padding: 1em 2em;
+    position: relative;
+    text-align: center;
+    width: 50%;
+
+    &:before,
+    &:after {
+      border: 1.5em solid $background;
+      bottom: -1em;
+      content: '';
+      display: block;
+      position: absolute;
+    }
+
+    &:before {
+      border-left-color: transparent;
+      border-right-width: 1.5em;
+      left: -2em;
+    }
+
+    &:after {
+      border-left-width: 1.5em;
+      border-right-color: transparent;
+      right: -2em;
+      z-index: -1;
+    }
+
+    *:before,
+    *:after {
+      border-color: darken($background, 20%) transparent transparent;
+      border-style: solid;
+      bottom: -1em;
+      content: '';
+      display: block;
+      position: absolute;
+    }
+
+    *:before {
+      border-width: 1em 0 0 1em;
+      left: 0;
+    }
+
+    *:after {
+      border-width: 1em 1em 0 0;
+      right: 0;
     }
   }
 }
@@ -387,34 +422,40 @@
 // ATTRIBUTE STYLING
 
 @mixin smooth {
-  border-radius:6px;
+  border-radius: 6px;
 }
 
 @mixin reset {
   body {
-    margin: 0;
-    padding-top: 25px;
-    font-size:16px;
-    font-family: helvetica, sans-serif;
     background-color: $off-white;
     color: $off-black;
+    font-family: helvetica, sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding-top: 25px;
   }
-  h1{
+
+  h1 {
     font-size: 3em;
   }
-  h2{
+
+  h2 {
     font-size: 2em;
   }
-  h3{
+
+  h3 {
     font-size: 1.75em;
   }
-  h4{
+
+  h4 {
     font-size: 1.5em;
   }
-  h5{
+
+  h5 {
     font-size: 1.25em;
   }
-  h6{
+
+  h6 {
     font-size: 1.125em;
   }
 }

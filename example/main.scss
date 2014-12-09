@@ -1,78 +1,81 @@
-@import "zeppelin.scss";
+@import 'zeppelin.scss';
 
 @include reset;
 
-body{
-  background-color:$blue-black;
+body {
+  background-color: $blue-black;
   color: $off-white;
 }
 
 .topper {
   @include fixed-nav($charcoal, shade);
-  p{
+  p {
     @include vert-margin(6px);
     @include smooth;
     @include size(25px);
-    display: inline-block;
-    text-align: center;
     border: 2px solid $off-white;
+    display: inline-block;
     font-weight: 900;
+    text-align: center;
   }
 }
-div{
+
+div {
   float: left;
 }
 
 .wrap {
-  background-color: $light-grey;
-  text-align: center;
   @include container();
-  padding: 20px;
-  @include smooth;
   @include vert-margin(20px);
+  @include smooth;
+  background-color: $light-grey;
+  padding: 20px;
+  text-align: center;
 }
 
-.header{
-  font-size:2em;
+.header {
+  font-size: 2em;
   @include center;
 }
-.test{
+
+.test {
   @include span(12);
   @include vert-margin(20px);
-  height: 100px;
+  @include smooth;
   background: $purple;
-  @include smooth
+  height: 100px;
 }
+
 .two {
   @include span(6);
   @include vert-margin(20px);
   @include smooth;
-  height: 100px;
   background: $carrot;
+  height: 100px;
 }
 
 .three {
   @include span(4);
   @include vert-margin(20px);
   @include smooth;
-  height: 100px;
   background: $blue-grey;
+  height: 100px;
 }
 
 .four {
   @include span(3);
   @include vert-margin(20px);
   @include smooth;
-  height: 100px;
   background: $light-blue;
+  height: 100px;
 }
 
 .six {
   @include span(2);
   @include vert-margin(20px);
   @include smooth;
-  height: 100px;
   background: $yellow;
+  height: 100px;
 }
 
 .half {
@@ -92,13 +95,13 @@ div{
   margin-bottom: 15px;
 }
 
-.stuff{
+.stuff {
   @include span(2);
   @include slide(-4);
   @include input;
 }
 
-.uno{
+.uno {
   @include button($red, float);
 }
 
@@ -131,10 +134,12 @@ div{
   @include striped-table;
   color: $charcoal;
 }
-.ribboner{
+
+.ribboner {
   @include clearfix;
   @include row;
 }
+
 .rib {
   @include row;
   @include ribbon($red, 22px);

@@ -1,4 +1,4 @@
-@mixin box-decoration-break($input){
+@mixin box-decoration-break($input) {
   -webkit-box-decoration-break: $input;
   box-decoration-break: $input;
 }
@@ -30,13 +30,16 @@
   &::-webkit-input-placeholder {
     $left: $right;
   }
+
   &:-moz-placeholder {
     $left: $right;
   }
+
   &::-moz-placeholder {
     $left: $right;
   }
-   :-ms-input-placeholder {
-     $left: $right; 
-   }
+
+  :-ms-input-placeholder {
+    $left: $right;
+ }
 }

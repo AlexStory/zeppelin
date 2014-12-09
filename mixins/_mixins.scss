@@ -1,9 +1,9 @@
 //HELPERS
 @mixin clearfix {
   &:after {
-    content: "";
-    display: table;
     clear: both;
+    content: '';
+    display: table;
   }
 }
 
@@ -76,7 +76,7 @@
   }
 }
 
-@mixin row (){
+@mixin row () {
   @include span(12);
 }
 
@@ -135,27 +135,27 @@
   border-radius: $size / 2;
 }
 
-@mixin triangle($width, $height, $color, $direction){
+@mixin triangle($width, $height, $color, $direction) {
   @include size(0);
   background-color: transparent;
-    @if $direction == up {
-      border-left: $width/2 solid transparent;
-      border-right: $width/2 solid transparent;
-      border-bottom: $height solid $color;
+  @if $direction == up {
+    border-bottom: $height solid $color;
+    border-left: $width/2 solid transparent;
+    border-right: $width/2 solid transparent;
 
-    } @else if $direction == right {
-      border-top: $width/2 solid transparent;
-      border-bottom: $width/2 solid transparent;
-      border-left: $height solid $color;
+  } @else if $direction == right {
+    border-bottom: $width/2 solid transparent;
+    border-left: $height solid $color;
+    border-top: $width/2 solid transparent;
 
-    } @else if $direction == down {
-      border-left: $width/2 solid transparent;
-      border-right: $width/2 solid transparent;
-      border-top: $height solid $color;
+  } @else if $direction == down {
+    border-left: $width/2 solid transparent;
+    border-right: $width/2 solid transparent;
+    border-top: $height solid $color;
 
-    } @else if $direction == left {
-      border-top: $width/2 solid transparent;
-      border-bottom: $width/2 solid transparent;
-      border-right: $height solid $color;
-    }
+  } @else if $direction == left {
+    border-bottom: $width/2 solid transparent;
+    border-right: $height solid $color;
+    border-top: $width/2 solid transparent;
   }
+}
