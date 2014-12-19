@@ -71,6 +71,9 @@ Takes a color, font-color, and style argument, and defaults for any argument tha
 ####Input
 Styles input fields, like text, date, text-area
 
+####Disabled
+Disables an form element so it can not be interacted with
+
 ####Fixed-Nav
 Turns an element into a bar fixed to the top of  the screen, optional argument shade, will five it ashadow
 
