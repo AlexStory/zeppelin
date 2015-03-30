@@ -3,6 +3,9 @@ zeppelin
 
 sass library of mixins i like, and some style features
 
+##To Be Added
+Mobile grid system
+
 ## Variables
 
 #### Web Safe Colors
